@@ -35,6 +35,10 @@ public class Config {
 
     @Getter
     @Setter
+    private List<String> blackClass;
+
+    @Getter
+    @Setter
     private String targetPath;
 
     @Getter
@@ -63,8 +67,9 @@ public class Config {
         Properties properties = new Properties();
         try {
             properties.load(configPath);
-            this.servletClass = Arrays.asList(properties.getProperty("servlet.class").split(","));
+            this.servletClass = Arrays.asList(properties.getProperty("api.class").split(","));
             this.filterClass = Arrays.asList(properties.getProperty("filter.class").split(","));
+            this.blackClass = Arrays.asList(properties.getProperty("black.class").split(","));
 
             String targetPath = properties.getProperty("target.path");
             File file = new File(targetPath);

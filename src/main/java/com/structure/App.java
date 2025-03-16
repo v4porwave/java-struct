@@ -9,8 +9,17 @@ import java.util.Objects;
 
 public class App {
     public static void main( String[] args ) throws Exception {
+        System.out.println("┬─┐┬─┐┌─┐  ┬┬─┐┌─┐┌┐┐  ┐─┐┌┐┐┬─┐┬ ┐┌─┐┌┐┐┬ ┐┬─┐┬─┐\n" +
+                "│─┘│┬┘│ │┌ │├─ │   │ ──└─┐ │ │┬┘│ ││   │ │ ││┬┘├─ \n" +
+                "┆  ┆└┘┘─┘└─┆┴─┘└─┘ ┆   ──┘ ┆ ┆└┘┆─┘└─┘ ┆ ┆─┘┆└┘┴─┘");
+        System.out.println("Author: v4por");
+        System.out.println("Version: 1.0");
+        System.out.println();
+        long start = System.currentTimeMillis();
         init(args);
         new Scanner().start();
+        long end = System.currentTimeMillis();
+        System.out.printf(">>> 扫描完毕, 共耗时 %.2fs.%n%n", (end - start) / 1000.0);
     }
 
     public static void init(String[] args) throws Exception {
